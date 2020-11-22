@@ -58,6 +58,9 @@ spec:
         env:
         - name: PODINFO_UI_COLOR
           value: "#34577c"
+        envFrom:
+        - configMapRef:
+            name: eds-microservice
         livenessProbe:
           httpGet:
             path: /healthz
